@@ -5,7 +5,11 @@
 <div align="center">
 	<img src="https://img.shields.io/badge/Swift-007396?style=flat&logo=Swift&logoColor=white" />
    <img src="https://img.shields.io/badge/Git-007396?style=flat&logo=Git&logoColor=white" /> 
+   <img src="https://img.shields.io/badge/java-007396?style=flat&logo=JAVA&logoColor=White" /> 
 </div>
-	<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LJH3904&layout=compact"><br><br>
+
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LJH3904&layout=compact"><br><br>
 <img src="https://github-readme-stats.vercel.app/api?username=LJH3904&show_icons=true">
-.
+
+
