@@ -6,3 +6,5 @@
 	<img src="https://img.shields.io/badge/Swift-007396?style=flat&logo=Swift&logoColor=white" />
    <img src="https://img.shields.io/badge/Git-007396?style=flat&logo=Git&logoColor=white" /> 
 </div>
+	<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=본인아이디&layout=compact"><br><br>
+<img src="https://github-readme-stats.vercel.app/api?username=본인아이디&show_icons=true">
