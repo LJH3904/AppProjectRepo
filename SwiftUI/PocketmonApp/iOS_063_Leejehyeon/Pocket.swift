@@ -13,14 +13,16 @@ struct Team1: Identifiable {
   let id :UUID = UUID()
   let name :String
   let poketArray : [Pocket]
-  static var result : String = "1"
+  static var team1State : Int = 0
 }
+
 struct Team2: Identifiable {
   let id :UUID = UUID()
   let name :String
   let poketArray : [Pocket]
-  static var result : String = "2"
+  static var team2State : Int = 0
 }
+
 struct Pocket: Identifiable{
   let id :UUID = UUID()
   let poketmonName : String
@@ -28,14 +30,7 @@ struct Pocket: Identifiable{
   
 }
 
-func comparePocket(_ n: Int){
-  
-  Team1.result = ""
-  Team2.result = ""
-}
 
-var team1State : Int = 0
-var team2State : Int = 0
 
 func changeState(_ n : Int) -> String{
   if n == 1{
@@ -61,20 +56,20 @@ func compareState(_ team1Type : Int, _ team2Type : Int) -> String{
   }else if team1Type == 2{
     switch team2Type{
       case 2:
-        return "무승부"
+        return "🔥과 🔥은 비깁니다."
       case 3:
-        return "팀1 승리"
+        return "🔥은 🌳을 이겨요 팀1 승리"
       default:
-        return "팀2 승리"
+        return "🔥은 💧를 이기지 못해요 팀2 승리"
     }
   }else{ // 3 = 풀 > 물(1)
     switch team2Type{
       case 3:
-        return "무승부"
+        return "🌳과 🌳은 비깁니다."
       case 1:
-        return "팀1 승리"
+        return "🌳은 💧을 이겨요 팀1 승리"
       default:
-        return "팀2 승리"
+        return "🌳은 🔥를 이기지 못해요 팀2 승리"
     }
   }
 }

@@ -19,7 +19,7 @@ struct Pocketmon1View: View {
           
           Button {
             transrate = changeState(pocketmon.type)
-            team1State = pocketmon.type
+            Team1.team1State = pocketmon.type
           } label: {
             Text("\(pocketmon.poketmonName)")
               .font(.system(size: 30))

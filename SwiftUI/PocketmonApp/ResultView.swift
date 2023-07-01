@@ -12,7 +12,7 @@ struct ResultView: View {
     //물1 불2 풀3
     ZStack{
       Color(.blue)
-      Text("\(compareState(team1State,team2State))")
+      Text("\(compareState(Team1.team1State,Team2.team2State))")
         .font(.system(size: 50))
         .foregroundColor(.white)
         .bold()
