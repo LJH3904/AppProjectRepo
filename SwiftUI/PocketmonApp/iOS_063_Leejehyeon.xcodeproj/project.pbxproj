@@ -26,7 +26,7 @@
 		363965F72A50412300147DD3 /* Pocketmon1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocketmon1View.swift; sourceTree = "<group>"; };
 		363965F92A50417F00147DD3 /* Pocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
 		363965FD2A50485800147DD3 /* Pocketmon2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocketmon2View.swift; sourceTree = "<group>"; };
-		363965FF2A50505100147DD3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultView.swift; path = ../ResultView.swift; sourceTree = "<group>"; };
+		363965FF2A50505100147DD3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +40,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360CA43A2A509D1300B8DB24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				363965F92A50417F00147DD3 /* Pocket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		360CA43B2A509D1E00B8DB24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				363965EB2A5040B600147DD3 /* ContentView.swift */,
+				363965FD2A50485800147DD3 /* Pocketmon2View.swift */,
+				363965F72A50412300147DD3 /* Pocketmon1View.swift */,
+				363965FF2A50505100147DD3 /* ResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		363965DD2A5040B600147DD3 = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				363965E92A5040B600147DD3 /* iOS_063_LeejehyeonApp.swift */,
-				363965F72A50412300147DD3 /* Pocketmon1View.swift */,
-				363965FF2A50505100147DD3 /* ResultView.swift */,
-				363965FD2A50485800147DD3 /* Pocketmon2View.swift */,
-				363965EB2A5040B600147DD3 /* ContentView.swift */,
-				363965F92A50417F00147DD3 /* Pocket.swift */,
+				360CA43B2A509D1E00B8DB24 /* View */,
+				360CA43A2A509D1300B8DB24 /* Model */,
 				363965ED2A5040B700147DD3 /* Assets.xcassets */,
 				363965EF2A5040B700147DD3 /* Preview Content */,
 			);
