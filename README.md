@@ -1,9 +1,11 @@
 # 목록
-- SwiftUI 
-  - ToyProject
-- UIKIT 
-  - ToyProject
-
+- iOS
+  - SwiftUI 
+    - ToyProject
+  - UIKIT 
+    - ToyProject
+- Android
+  -
 ## ~
 - xcode와 친해지는중
 - 스위프트 문법으로 만드는 프로젝트들
