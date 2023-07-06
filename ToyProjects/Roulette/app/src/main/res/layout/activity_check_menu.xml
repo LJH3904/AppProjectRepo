@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9FF396"
+    android:orientation="vertical"
+    tools:context=".CheckMenuActivity">
+
+    <TextView
+        android:id="@+id/textView1_check_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메뉴판"
+        android:textAlignment="center"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="629dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkBox_check_burgerking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="버거킹" />
+
+        <CheckBox
+            android:id="@+id/checkBox_check_gunaesikdang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="법구" />
+
+        <CheckBox
+            android:id="@+id/checkBox_check_haewall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="해월" />
+
+        <CheckBox
+            android:id="@+id/checkBox_check_china"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="금석궁" />
+
+        <CheckBox
+            android:id="@+id/checkBox_check_myungga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="명가" />
+
+        <CheckBox
+            android:id="@+id/checkBox_check_sundae"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="순대국" />
+
+        <CheckBox
+            android:id="@+id/checkBox_check_donkachu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="목동카츠" />
+
+        <CheckBox
+            android:id="@+id/checkBox_check_naemyun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="육쌈냉면" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_check_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#6CEF55"
+            android:text="확인" />
+
+    </LinearLayout>
+
+</LinearLayout>

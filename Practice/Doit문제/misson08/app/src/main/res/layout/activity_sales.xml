@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SalesActivity">
+
+    <TextView
+        android:id="@+id/textView_sales"
+        android:layout_width="154dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="매출 관리"
+        android:textSize="20dp"
+
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="154dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="211dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+        <Button
+            android:id="@+id/button_sales_menu"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:text="menu" />
+
+        <Button
+            android:id="@+id/button_sales_login"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:text="login" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="From"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_sales_Result"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+
+        android:textSize="30dp"
+        android:id="@+id/textView_sales_Result"
+        android:layout_width="282dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="368dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
