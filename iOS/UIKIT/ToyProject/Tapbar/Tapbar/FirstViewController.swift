@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
   func buildInterface(){
     view.backgroundColor = .white
     
-   
+    
     
     countLabel.backgroundColor = .systemRed
     countLabel.textColor = .black
@@ -32,7 +32,7 @@ class FirstViewController: UIViewController {
     NSLayoutConstraint.activate([
       countLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       countLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-      ])
+    ])
     let button :UIButton = UIButton()
     button.setTitle("dd", for: .normal)
     button.backgroundColor = .systemRed
@@ -43,7 +43,7 @@ class FirstViewController: UIViewController {
     NSLayoutConstraint.activate([
       button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       button.topAnchor.constraint(equalTo: countLabel.bottomAnchor, constant: 20)
-      ])
+    ])
     button.addTarget(self, action:#selector(tapped), for: .touchUpInside)
     
   }

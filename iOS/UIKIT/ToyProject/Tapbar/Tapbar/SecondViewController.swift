@@ -8,7 +8,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+  
   var count : Int = 0
   let countLabel :UILabel = UILabel()
   override func viewDidLoad() {
@@ -21,7 +21,7 @@ class SecondViewController: UIViewController {
   func buildInterface(){
     view.backgroundColor = .white
     
-   
+    
     
     countLabel.backgroundColor = .systemRed
     countLabel.textColor = .black
@@ -33,7 +33,7 @@ class SecondViewController: UIViewController {
     NSLayoutConstraint.activate([
       countLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       countLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-      ])
+    ])
     let button :UIButton = UIButton()
     button.setTitle("dd", for: .normal)
     button.backgroundColor = .systemRed
@@ -44,7 +44,7 @@ class SecondViewController: UIViewController {
     NSLayoutConstraint.activate([
       button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       button.topAnchor.constraint(equalTo: countLabel.bottomAnchor, constant: 20)
-      ])
+    ])
     button.addTarget(self, action:#selector(tapped), for: .touchUpInside)
     
   }
@@ -52,5 +52,5 @@ class SecondViewController: UIViewController {
     count += 2
     countLabel.text = "\(count)"
   }
-
+  
 }

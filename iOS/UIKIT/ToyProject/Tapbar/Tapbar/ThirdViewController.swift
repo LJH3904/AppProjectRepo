@@ -8,7 +8,7 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
-
+  
   let celsiusTextfield : UITextField = UITextField()
   let changedToFahrenheit : UIButton = UIButton()
   let FahrenheitLabel : UILabel = UILabel()
@@ -63,15 +63,15 @@ class ThirdViewController: UIViewController {
     //celsiusTextfield = 섭씨
     //FahrenheitLabel = 화씨
     
-//    var test = Int(celsiusTextfield.text) * 9/5 + 32
+    //    var test = Int(celsiusTextfield.text) * 9/5 + 32
     var test: Int
     if let c = celsiusTextfield.text {
       test = Int(c) ?? 0
       
       FahrenheitLabel.text = "\((test * 9/5) + 32 )"
     }
-
+    
   }
-   
-
+  
+  
 }

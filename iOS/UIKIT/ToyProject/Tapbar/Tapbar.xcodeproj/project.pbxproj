@@ -16,6 +16,8 @@
 		360985E12A67A9330094B876 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360985E02A67A9330094B876 /* SecondViewController.swift */; };
 		360985E32A67A94B0094B876 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360985E22A67A94B0094B876 /* FirstViewController.swift */; };
 		360985E52A67AA780094B876 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360985E42A67AA780094B876 /* ThirdViewController.swift */; };
+		3691022D2A67B5FE004921EE /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691022C2A67B5FE004921EE /* fourthViewController.swift */; };
+		3691022F2A67B62C004921EE /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691022E2A67B62C004921EE /* TapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		360985E02A67A9330094B876 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		360985E22A67A94B0094B876 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		360985E42A67AA780094B876 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		3691022C2A67B5FE004921EE /* fourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
+		3691022E2A67B62C004921EE /* TapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TapViewController.swift; path = ../TapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				360985E22A67A94B0094B876 /* FirstViewController.swift */,
 				360985E02A67A9330094B876 /* SecondViewController.swift */,
 				360985E42A67AA780094B876 /* ThirdViewController.swift */,
+				3691022C2A67B5FE004921EE /* fourthViewController.swift */,
+				3691022E2A67B62C004921EE /* TapViewController.swift */,
 				360985D02A67A7410094B876 /* Main.storyboard */,
 				360985D32A67A7420094B876 /* Assets.xcassets */,
 				360985D52A67A7420094B876 /* LaunchScreen.storyboard */,
@@ -150,8 +156,10 @@
 				360985E32A67A94B0094B876 /* FirstViewController.swift in Sources */,
 				360985CF2A67A7410094B876 /* ViewController.swift in Sources */,
 				360985CB2A67A7410094B876 /* AppDelegate.swift in Sources */,
+				3691022D2A67B5FE004921EE /* fourthViewController.swift in Sources */,
 				360985CD2A67A7410094B876 /* SceneDelegate.swift in Sources */,
 				360985E52A67AA780094B876 /* ThirdViewController.swift in Sources */,
+				3691022F2A67B62C004921EE /* TapViewController.swift in Sources */,
 				360985E12A67A9330094B876 /* SecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
