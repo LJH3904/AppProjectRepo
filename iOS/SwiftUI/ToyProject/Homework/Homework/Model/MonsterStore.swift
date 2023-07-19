@@ -67,6 +67,7 @@ class MonsterStore : ObservableObject{
   }
   func deleteMonster(monster : Monster){
     choiceMonster.removeAll(where: { $0.id == monster.id })
+    
   }
 
   func shuffled(){
