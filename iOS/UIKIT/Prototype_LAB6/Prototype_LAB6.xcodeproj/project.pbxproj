@@ -21,6 +21,7 @@
 		360DCAD22A6928F2000D1494 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DCAD12A6928F2000D1494 /* SignUpViewController.swift */; };
 		360DCAD42A6929CC000D1494 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DCAD32A6929CC000D1494 /* LoginViewController.swift */; };
 		360DCAD82A692DFF000D1494 /* QuotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360DCAD72A692DFF000D1494 /* QuotationViewController.swift */; };
+		369EDE432A6D279500578676 /* ChangeMypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EDE422A6D279500578676 /* ChangeMypageViewController.swift */; };
 		64A2C0442A6A57FD004D4E5B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A2C0432A6A57FD004D4E5B /* CardView.swift */; };
 		64A2C0462A6A6E3F004D4E5B /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A2C0452A6A6E3F004D4E5B /* ForthViewController.swift */; };
 		B1E8A1162A6A440B00E913B5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E8A1152A6A440B00E913B5 /* InfoViewController.swift */; };
@@ -45,6 +46,7 @@
 		360DCAD12A6928F2000D1494 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		360DCAD32A6929CC000D1494 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		360DCAD72A692DFF000D1494 /* QuotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotationViewController.swift; sourceTree = "<group>"; };
+		369EDE422A6D279500578676 /* ChangeMypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMypageViewController.swift; sourceTree = "<group>"; };
 		64A2C0432A6A57FD004D4E5B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		64A2C0452A6A6E3F004D4E5B /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
 		B1E8A1152A6A440B00E913B5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				360DCACB2A692693000D1494 /* MyPageViewController.swift */,
+				369EDE422A6D279500578676 /* ChangeMypageViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				36038F8B2A690C58008AB36B /* ThirdViewController.swift in Sources */,
 				64A2C0442A6A57FD004D4E5B /* CardView.swift in Sources */,
 				360DCAD82A692DFF000D1494 /* QuotationViewController.swift in Sources */,
+				369EDE432A6D279500578676 /* ChangeMypageViewController.swift in Sources */,
 				36038F872A690C48008AB36B /* FirstViewController.swift in Sources */,
 				64A2C0462A6A6E3F004D4E5B /* ForthViewController.swift in Sources */,
 				360DCAC42A691B22000D1494 /* WholesaleListViewController.swift in Sources */,

@@ -1,15 +1,19 @@
 //
-//  MyPageViewController.swift
+//  ChangeMypageViewController.swift
 //  Prototype_LAB6
 //
-//  Created by LJh on 2023/07/20.
+//  Created by LJh on 2023/07/23.
 //
 
 import UIKit
+enum CameraError : Error{
+    case notAvailable
+}
+class ChangeMypageViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+  
+  let imgPicker = UIImagePickerController()
+  
 
-class MyPageViewController: UIViewController {
-  
-  
   let profileImage : UIImageView = {
     let customImage = UIImage(named: "images")
     let width = 20
@@ -40,10 +44,10 @@ class MyPageViewController: UIViewController {
     return nameLabel
   }()
   
-  let nameTextField: UILabel = {
-    let nameTextField = UILabel()
+  let nameTextField: UITextField = {
+    let nameTextField = UITextField()
     nameTextField.translatesAutoresizingMaskIntoConstraints = false
-    nameTextField.text = "이름이 나타나는곳"
+    nameTextField.placeholder = "이름 입력"
     nameTextField.layer.borderColor = UIColor.black.cgColor
     nameTextField.layer.borderWidth = 1
     return nameTextField
@@ -56,10 +60,10 @@ class MyPageViewController: UIViewController {
     return emailLabel
   }()
   
-  let emailTextField: UILabel = {
-    let emailTextField = UILabel()
+  let emailTextField: UITextField = {
+    let emailTextField = UITextField()
     emailTextField.translatesAutoresizingMaskIntoConstraints = false
-    emailTextField.text = "이메일이 나타나는곳"
+    emailTextField.placeholder = "이메일 입력"
     emailTextField.layer.borderColor = UIColor.black.cgColor
     emailTextField.layer.borderWidth = 1
     return emailTextField
@@ -72,10 +76,10 @@ class MyPageViewController: UIViewController {
     
     return passwordLabel
   }()
-  let passwordTextField: UILabel = {
-    let passwordTextField = UILabel()
+  let passwordTextField: UITextField = {
+    let passwordTextField = UITextField()
     passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-    passwordTextField.text = "비밀번호가 나타나는곳"
+    passwordTextField.placeholder = "별명 입력"
     passwordTextField.layer.borderColor = UIColor.black.cgColor
     passwordTextField.layer.borderWidth = 1
     return passwordTextField
@@ -89,10 +93,10 @@ class MyPageViewController: UIViewController {
     
     return telLabel
   }()
-  let telTextField: UILabel = {
-    let telTextField = UILabel()
+  let telTextField: UITextField = {
+    let telTextField = UITextField()
     telTextField.translatesAutoresizingMaskIntoConstraints = false
-    telTextField.text = "전화번호 나타나는곳"
+    telTextField.placeholder = "전화번호 입력"
     telTextField.layer.borderColor = UIColor.black.cgColor
     telTextField.layer.borderWidth = 1
     
@@ -100,10 +104,10 @@ class MyPageViewController: UIViewController {
   }()
   
   
-  let introduceTextView: UILabel = {
-    let introduceTextView = UILabel()
+  let introduceTextView: UITextView = {
+    let introduceTextView = UITextView()
     introduceTextView.translatesAutoresizingMaskIntoConstraints = false
-    introduceTextView.text = "자기소개란"
+    introduceTextView.text = "변경하실거면 변경 버튼 누르세요."
     introduceTextView.layer.borderColor = UIColor.black.cgColor
     introduceTextView.layer.borderWidth = 5
     introduceTextView.sizeToFit()
@@ -111,62 +115,36 @@ class MyPageViewController: UIViewController {
     
     return introduceTextView
   }()
-  
-  
-  //왜 안나오지 ? 버튼 > 애드 > 콘스트
-  
- 
-  let changeButton : UIButton = {
+  let submitButton : UIButton = {
     let button = UIButton()
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("프로필 변경", for: .normal)
-    button.setTitleColor(.black, for: .normal)
+    button.setTitle("변경", for: .normal)
+    button.setTitleColor(.black, for: .normal) // 이건 무조건 해야함 안하면 흰색되버림
     
-    button.addTarget(self, action: #selector(goTotheChangeMypageVC), for: .touchUpInside)
+    button.addTarget(self, action: #selector(a), for: .touchUpInside)
     return button
   }()
   
-  let addView : UIView = {
-    let view = UIView()
-    view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = .white
-    view.layer.borderColor = UIColor.black.cgColor
-    view.layer.borderWidth = 5
-    return view
-  }()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    navigationItem.title = "마이페이지"
-    navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .bookmarks)
-    
-    view.backgroundColor = .white
-    view.addSubview(addView)
-    
-    [profileImage,nameLabel,nameTextField,emailLabel,emailTextField,passwordLabel,passwordTextField,
-     telLabel,telTextField,introduceTextView,changeButton]
-      .forEach { addView.addSubview($0) }
-    
-    setupConstraints()
-    
-  }
-  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+      view.backgroundColor = .systemBackground
+      navigationItem.title = "정보수정"
+      imgPicker.delegate = self
+      [profileImage,nameLabel,nameTextField,emailLabel,emailTextField,passwordLabel,passwordTextField,
+       telLabel,telTextField,introduceTextView,submitButton]
+        .forEach { view.addSubview($0) }
+      setupConstraints()
+    }
   
   func setupConstraints(){
     let safeArea = view.safeAreaLayoutGuide
     let padding: CGFloat = 20
-    let widthPullScreen = view.frame.width
-    let heightPullscreen = view.frame.height
-    NSLayoutConstraint.activate([
-      addView.leadingAnchor.constraint(equalTo:view.leadingAnchor),
-      addView.topAnchor.constraint(equalTo: view.topAnchor),
-      addView.heightAnchor.constraint(equalToConstant: heightPullscreen  ),
-      addView.widthAnchor.constraint(equalToConstant: widthPullScreen ),
-    ])
     
     NSLayoutConstraint.activate([
       profileImage.topAnchor.constraint(equalTo: safeArea.topAnchor),
       profileImage.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor,constant: padding),
+      submitButton.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: padding),
+      submitButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: padding + CGFloat(30)),
       
       nameLabel.topAnchor.constraint(equalTo: safeArea.topAnchor),
       nameLabel.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor,constant: padding),
@@ -195,16 +173,49 @@ class MyPageViewController: UIViewController {
       introduceTextView.widthAnchor.constraint(equalToConstant: 300),
       introduceTextView.heightAnchor.constraint(equalToConstant: 200),
       
-      changeButton.topAnchor.constraint(equalTo: introduceTextView.bottomAnchor, constant: padding),
-      changeButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: padding)
+      
+      
     ])
   }
-  @objc func goTotheChangeMypageVC(){
-
-        let detailViewController = ChangeMypageViewController()
-        navigationController?.pushViewController(detailViewController, animated:.random())
+  @objc func a(){
+    let alert =  UIAlertController(title: "Title", message: "message", preferredStyle: .actionSheet)
+    let library =  UIAlertAction(title: "앨범에서 가져오기", style: .default) { (action) in self.openLibrary() }
+    let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in
+        guard (try? self.openCamera()) != nil else{
+            let alert = UIAlertController(title: "카메라 접근 실패", message: "카메라를 이용할 수 없습니다.", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: false, completion: nil)
+            print("Camera Not Available")
+            return
+        }
+    }
+    let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+    alert.addAction(library)
+    alert.addAction(camera)
+    alert.addAction(cancel)
+    present(alert, animated: true, completion: nil)
+  }
+  func openLibrary(){
+      imgPicker.sourceType = .photoLibrary
+      present(imgPicker, animated: false, completion: nil)
+  }
+  func openCamera() throws{
+      guard UIImagePickerController .isSourceTypeAvailable(.camera) else {
+          throw CameraError.notAvailable
+      }
+      imgPicker.sourceType = .camera
+      present(imgPicker, animated: false, completion: nil)
   }
   
-  
-}
 
+}
+extension MyPageViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if info[UIImagePickerController.InfoKey.originalImage] is UIImage{
+          
+            print(info)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
