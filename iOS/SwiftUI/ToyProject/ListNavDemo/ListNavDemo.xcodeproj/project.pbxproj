@@ -32,7 +32,6 @@
 		361F05E02A6FA20F00B5229D /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
 		361F05E52A6FA80900B5229D /* AddNewCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCar.swift; sourceTree = "<group>"; };
 		361F05E72A6FAC5000B5229D /* DataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInput.swift; sourceTree = "<group>"; };
-		3697D8DF2A6FC8F4001A4837 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		36AF0AF02A6F97220066120D /* ListNavDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListNavDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AF0AF32A6F97220066120D /* ListNavDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNavDemoApp.swift; sourceTree = "<group>"; };
 		36AF0AF52A6F97220066120D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				361F05D62A6F992C00B5229D /* Car.swift */,
-				361F05D82A6F99D600B5229D /* CarData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -83,7 +81,8 @@
 		36AF0AE72A6F97220066120D = {
 			isa = PBXGroup;
 			children = (
-				3697D8DF2A6FC8F4001A4837 /* Readme.md */,
+				36AF0AF32A6F97220066120D /* ListNavDemoApp.swift */,
+				547FEB022A6FFA2A0040A87C /* Others */,
 				361F05E32A6FA60500B5229D /* Model */,
 				361F05E22A6FA5E900B5229D /* View */,
 				361F05E42A6FA61F00B5229D /* Store */,
@@ -103,7 +102,6 @@
 		36AF0AF22A6F97220066120D /* ListNavDemo */ = {
 			isa = PBXGroup;
 			children = (
-				36AF0AF32A6F97220066120D /* ListNavDemoApp.swift */,
 				361F05D22A6F988900B5229D /* Contents.json */,
 				361F05D42A6F98A300B5229D /* carData.json */,
 				36AF0AF72A6F97230066120D /* Assets.xcassets */,
@@ -118,6 +116,14 @@
 				36AF0AFA2A6F97230066120D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		547FEB022A6FFA2A0040A87C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				361F05D82A6F99D600B5229D /* CarData.swift */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
