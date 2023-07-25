@@ -36,7 +36,7 @@ struct MonsterView: View {
               HStack{
                 
                 //MARK: - 궁금한거
-    //괴물들의 리스트뷰를 만들어서 나타내었는데 그 괴물들의 이미지의 대한 주소를 가져오지만 데이터양이 많아져서 전부 그리지 못하고 있습니다.
+    //괴물들의 리스트뷰를 만들어서 나타내었는데 그 괴물들의 이미지의 대한 주소를 가져오지만 데이터양이 많아져서 전부 그리지 못하는건가요 ??
     // 문제의 코드
 //                AsyncImage(url: idx.locationURL) { image in
 //                  image
@@ -47,8 +47,8 @@ struct MonsterView: View {
 //                } placeholder: {
 //                  ProgressView()
 //                }
-//           하지만 placeholder에 이미지뷰를 넣었더니 됩니다.
-//          다른점이라곤 progressView와 image뷰 차이인데 왜일까요?
+//           하지만 밑에처럼  placeholder에 이미지뷰를 넣었더니 됩니다.
+//           다른점이라곤 progressView와 image뷰 차이인데 왜일까요?
                 AsyncImage(url: idx.locationURL) { image in
                   image
                     .resizable()
