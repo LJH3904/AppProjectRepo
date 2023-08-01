@@ -23,6 +23,7 @@ struct HashTag : Identifiable{
   let hashTag : String
   let hashTagColors : Color
 }
+
 class HashTagStore : ObservableObject {
   @Published var hashTagStore : [HashTag] = []
   init(){
