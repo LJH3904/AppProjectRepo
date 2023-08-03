@@ -15,6 +15,11 @@
 		A6D990132A7B6E8F00913C6B /* WebDemoUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D990122A7B6E8F00913C6B /* WebDemoUIUITests.swift */; };
 		A6D990152A7B6E8F00913C6B /* WebDemoUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D990142A7B6E8F00913C6B /* WebDemoUIUITestsLaunchTests.swift */; };
 		A6D990222A7B6EDE00913C6B /* MyUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D990212A7B6EDE00913C6B /* MyUILabel.swift */; };
+		A6D990242A7B770600913C6B /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D990232A7B770600913C6B /* MyWebView.swift */; };
+		A6D990262A7B7D2100913C6B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D990252A7B7D2100913C6B /* ChartViewController.swift */; };
+		A6D990282A7B7D8B00913C6B /* MyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D990272A7B7D8B00913C6B /* MyChartView.swift */; };
+		A6D9902A2A7B826C00913C6B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D990292A7B826C00913C6B /* SafariView.swift */; };
+		A6D9902C2A7B82DE00913C6B /* MySafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D9902B2A7B82DE00913C6B /* MySafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		A6D990122A7B6E8F00913C6B /* WebDemoUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoUIUITests.swift; sourceTree = "<group>"; };
 		A6D990142A7B6E8F00913C6B /* WebDemoUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A6D990212A7B6EDE00913C6B /* MyUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUILabel.swift; sourceTree = "<group>"; };
+		A6D990232A7B770600913C6B /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		A6D990252A7B7D2100913C6B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		A6D990272A7B7D8B00913C6B /* MyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChartView.swift; sourceTree = "<group>"; };
+		A6D990292A7B826C00913C6B /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		A6D9902B2A7B82DE00913C6B /* MySafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +108,12 @@
 			children = (
 				A6D98FF72A7B6E8E00913C6B /* WebDemoUIApp.swift */,
 				A6D98FF92A7B6E8E00913C6B /* ContentView.swift */,
+				A6D990292A7B826C00913C6B /* SafariView.swift */,
 				A6D990212A7B6EDE00913C6B /* MyUILabel.swift */,
+				A6D990232A7B770600913C6B /* MyWebView.swift */,
+				A6D990272A7B7D8B00913C6B /* MyChartView.swift */,
+				A6D9902B2A7B82DE00913C6B /* MySafariView.swift */,
+				A6D990252A7B7D2100913C6B /* ChartViewController.swift */,
 				A6D98FFB2A7B6E8E00913C6B /* Assets.xcassets */,
 				A6D98FFD2A7B6E8E00913C6B /* Preview Content */,
 			);
@@ -261,8 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6D98FFA2A7B6E8E00913C6B /* ContentView.swift in Sources */,
+				A6D990282A7B7D8B00913C6B /* MyChartView.swift in Sources */,
+				A6D990242A7B770600913C6B /* MyWebView.swift in Sources */,
 				A6D98FF82A7B6E8E00913C6B /* WebDemoUIApp.swift in Sources */,
+				A6D9902C2A7B82DE00913C6B /* MySafariView.swift in Sources */,
 				A6D990222A7B6EDE00913C6B /* MyUILabel.swift in Sources */,
+				A6D990262A7B7D2100913C6B /* ChartViewController.swift in Sources */,
+				A6D9902A2A7B826C00913C6B /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

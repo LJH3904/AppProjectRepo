@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTabIndex: Int = 1
+    
     var body: some View {
-        HStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView(selection: $selectedTabIndex) {
             
             VStack {
                 MyUILabel(text: "Hello World!")
@@ -25,8 +23,40 @@ struct ContentView: View {
                 MyUILabel(text: "We're welcome!")
                     .background(.green)
             }
+            .tabItem {
+                Label("Label", systemImage: "text.alignleft")
+            }
+            .tag(1)
+            
+            VStack {
+                MyWebView()
+            }
+            .tabItem {
+                Label("WKWebView", systemImage: "safari")
+            }
+            .tag(2)
+            
+            NavigationStack {
+                VStack {
+                    Text("Demo")
+                    MyChartView()
+                }
+                .navigationTitle("Chart")
+            }
+            .tabItem {
+                Label("Chart", systemImage: "chart.bar.xaxis")
+            }
+            .tag(3)
+            
+            NavigationStack {
+                SafariView()
+                    .navigationTitle("Safari View")
+            }
+            .tabItem {
+                Label("Safari", systemImage: "safari.fill")
+            }
+            .tag(4)
         }
-        .padding()
     }
 }
 

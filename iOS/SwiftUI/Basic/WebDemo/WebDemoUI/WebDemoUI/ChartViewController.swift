@@ -1,11 +1,11 @@
 //
-//  ViewController.swift
-//  WebDemoKit
+//  ChartViewController.swift
+//  WebDemoUI
 //
 //  Created by Jongwook Park on 2023/08/03.
 //
 
-import UIKit
+import SwiftUI
 import WebKit
 
 struct GraphData {
@@ -15,7 +15,8 @@ struct GraphData {
     var flag: String
 }
 
-class ViewController: UIViewController {
+class ChartViewController: UIViewController {
+    
     let graphDataArray: [GraphData] = [
         GraphData(name: "한국", value: 100, color: .blue, flag: "🇰🇷"),
         GraphData(name: "일본", value: 70, color: .brown, flag: "🇯🇵"),
@@ -29,7 +30,6 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
-//        buildWebView()
         buildChart()
     }
     
@@ -190,4 +190,3 @@ class ViewController: UIViewController {
         secontView.frame.origin.y = firstY + firstHeight + 20
     }
 }
-
