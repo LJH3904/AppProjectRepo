@@ -13,7 +13,7 @@ struct CardView: View {
   
   @State private var imageNumber : Int = 1
   @State private var randomnumber : Int = 1
-  
+  @State private var isShowingSheet : Bool = false
   //MARK: - 함수들
   func randomImage(){
     print("----Button was pressed")
@@ -29,7 +29,7 @@ struct CardView: View {
     print("--- The End-----")
     print("\n")
   }
- 
+  
   var body: some View {
     //MARK: - Card
     
@@ -51,10 +51,15 @@ struct CardView: View {
             
             Button {
               //action : show a sheet
-              randomImage()
+              isShowingSheet.toggle()
             } label: {
-              CustomButtonView()              }
-            
+              CustomButtonView()
+            }
+            .sheet(isPresented: $isShowingSheet){
+              SettingView()
+                .presentationDragIndicator(.visible)
+                .presentationDetents([.medium,.large])
+            }
           }
           
           Text("Fun and enjoyable outdoor activity for freiends and families.")
@@ -65,16 +70,10 @@ struct CardView: View {
         
         .padding(.horizontal,30)
         
-        //MARK: - main COntent
-
+        //MARK: - Main Content
+        
         ZStack {
-          Circle()
-            .fill(
-              LinearGradient(colors: [
-                Color("ColorIndigoMedium"),
-                Color("ColorSalmonLight")],
-                             startPoint: .topLeading, endPoint: .bottomLeading))
-            .frame(width: 256,height: 256)
+          CustomCircleView()
           Image("image-\(imageNumber)")
             .resizable()
             .scaledToFit()
@@ -91,9 +90,9 @@ struct CardView: View {
             .fontWeight(.heavy)
             .foregroundStyle(
               LinearGradient(colors: [.customGreenLight,.customGreenMedium],
-                  startPoint: .top,
-                  endPoint: .bottom
-              )
+                             startPoint: .top,
+                             endPoint: .bottom
+                            )
             )
             .shadow(color: .black.opacity(0.25), radius: 0.25, x: 1, y: 2)
         }

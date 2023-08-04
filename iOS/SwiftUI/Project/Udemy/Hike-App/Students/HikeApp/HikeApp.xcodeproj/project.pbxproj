@@ -16,6 +16,9 @@
 		36C5FA372A6DAEA2009C815D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5FA362A6DAEA2009C815D /* ColorExtension.swift */; };
 		36C5FA3B2A6DB4F1009C815D /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5FA3A2A6DB4F1009C815D /* CustomButtonView.swift */; };
 		36F38C5D2A7D37AE00408CCF /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C5C2A7D37AE00408CCF /* GradientButtonStyle.swift */; };
+		36F38C5F2A7D3E1600408CCF /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C5E2A7D3E1600408CCF /* CustomCircleView.swift */; };
+		36F38C612A7D3F9000408CCF /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C602A7D3F9000408CCF /* MotionAnimationView.swift */; };
+		36F38C642A7D508600408CCF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C632A7D508600408CCF /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		36C5FA362A6DAEA2009C815D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		36C5FA3A2A6DB4F1009C815D /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		36F38C5C2A7D37AE00408CCF /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
+		36F38C5E2A7D3E1600408CCF /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
+		36F38C602A7D3F9000408CCF /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
+		36F38C632A7D508600408CCF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,7 @@
 			children = (
 				36C5FA352A6DAE8E009C815D /* Utility */,
 				36C2FE3B2A6DA8C500200696 /* HikeAppApp.swift */,
-				36C2FE3D2A6DA8C500200696 /* ContentView.swift */,
+				36F38C622A7D507500408CCF /* Screens */,
 				36C2FE3F2A6DA8C500200696 /* Assets.xcassets */,
 				36C2FE412A6DA8C500200696 /* Preview Content */,
 				36C2FE4B2A6DAC0400200696 /* Component */,
@@ -85,6 +91,8 @@
 				36C2FE492A6DAAF500200696 /* CardView.swift */,
 				36C5FA332A6DACBA009C815D /* CustomBackgroundView.swift */,
 				36C5FA3A2A6DB4F1009C815D /* CustomButtonView.swift */,
+				36F38C5E2A7D3E1600408CCF /* CustomCircleView.swift */,
+				36F38C602A7D3F9000408CCF /* MotionAnimationView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -96,6 +104,15 @@
 				36F38C5C2A7D37AE00408CCF /* GradientButtonStyle.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		36F38C622A7D507500408CCF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				36C2FE3D2A6DA8C500200696 /* ContentView.swift */,
+				36F38C632A7D508600408CCF /* SettingView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				36C2FE3E2A6DA8C500200696 /* ContentView.swift in Sources */,
+				36F38C642A7D508600408CCF /* SettingView.swift in Sources */,
+				36F38C5F2A7D3E1600408CCF /* CustomCircleView.swift in Sources */,
 				36C2FE4A2A6DAAF500200696 /* CardView.swift in Sources */,
 				36C2FE3C2A6DA8C500200696 /* HikeAppApp.swift in Sources */,
 				36C5FA3B2A6DB4F1009C815D /* CustomButtonView.swift in Sources */,
 				36F38C5D2A7D37AE00408CCF /* GradientButtonStyle.swift in Sources */,
+				36F38C612A7D3F9000408CCF /* MotionAnimationView.swift in Sources */,
 				36C5FA342A6DACBA009C815D /* CustomBackgroundView.swift in Sources */,
 				36C5FA372A6DAEA2009C815D /* ColorExtension.swift in Sources */,
 			);
