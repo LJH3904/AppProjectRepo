@@ -19,6 +19,7 @@
 		36F38C5F2A7D3E1600408CCF /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C5E2A7D3E1600408CCF /* CustomCircleView.swift */; };
 		36F38C612A7D3F9000408CCF /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C602A7D3F9000408CCF /* MotionAnimationView.swift */; };
 		36F38C642A7D508600408CCF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C632A7D508600408CCF /* SettingView.swift */; };
+		36F38C662A7D5AC600408CCF /* CustomListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F38C652A7D5AC600408CCF /* CustomListRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		36F38C5E2A7D3E1600408CCF /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		36F38C602A7D3F9000408CCF /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 		36F38C632A7D508600408CCF /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		36F38C652A7D5AC600408CCF /* CustomListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +69,10 @@
 		36C2FE3A2A6DA8C500200696 /* HikeApp */ = {
 			isa = PBXGroup;
 			children = (
-				36C5FA352A6DAE8E009C815D /* Utility */,
-				36C2FE3B2A6DA8C500200696 /* HikeAppApp.swift */,
-				36F38C622A7D507500408CCF /* Screens */,
-				36C2FE3F2A6DA8C500200696 /* Assets.xcassets */,
-				36C2FE412A6DA8C500200696 /* Preview Content */,
 				36C2FE4B2A6DAC0400200696 /* Component */,
+				36C5FA352A6DAE8E009C815D /* Utility */,
+				36C2FE412A6DA8C500200696 /* Preview Content */,
+				36F38C622A7D507500408CCF /* Screens */,
 			);
 			path = HikeApp;
 			sourceTree = "<group>";
@@ -80,6 +80,7 @@
 		36C2FE412A6DA8C500200696 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				36C2FE3B2A6DA8C500200696 /* HikeAppApp.swift */,
 				36C2FE422A6DA8C500200696 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -93,6 +94,7 @@
 				36C5FA3A2A6DB4F1009C815D /* CustomButtonView.swift */,
 				36F38C5E2A7D3E1600408CCF /* CustomCircleView.swift */,
 				36F38C602A7D3F9000408CCF /* MotionAnimationView.swift */,
+				36F38C652A7D5AC600408CCF /* CustomListRowView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -111,6 +113,7 @@
 			children = (
 				36C2FE3D2A6DA8C500200696 /* ContentView.swift */,
 				36F38C632A7D508600408CCF /* SettingView.swift */,
+				36C2FE3F2A6DA8C500200696 /* Assets.xcassets */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				36C2FE3E2A6DA8C500200696 /* ContentView.swift in Sources */,
 				36F38C642A7D508600408CCF /* SettingView.swift in Sources */,
+				36F38C662A7D5AC600408CCF /* CustomListRowView.swift in Sources */,
 				36F38C5F2A7D3E1600408CCF /* CustomCircleView.swift in Sources */,
 				36C2FE4A2A6DAAF500200696 /* CardView.swift in Sources */,
 				36C2FE3C2A6DA8C500200696 /* HikeAppApp.swift in Sources */,
@@ -318,8 +322,10 @@
 		36C2FE472A6DA8C500200696 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-MagnifyingGlass AppIcon-Backpack AppIcon-Camera AppIcon-Campfire AppIcon-Map AppIcon-Mushroom";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HikeApp/Preview Content\"";
@@ -347,8 +353,10 @@
 		36C2FE482A6DA8C500200696 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-MagnifyingGlass AppIcon-Backpack AppIcon-Camera AppIcon-Campfire AppIcon-Map AppIcon-Mushroom";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HikeApp/Preview Content\"";
