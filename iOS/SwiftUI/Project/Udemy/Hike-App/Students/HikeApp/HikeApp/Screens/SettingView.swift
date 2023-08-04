@@ -127,11 +127,8 @@ struct SettingView: View {
           
           CustomListRowView(rowLabel: "Designer", rowIcon: "paintpalette", rowContent: "LJS", rowTintColor: .pink)
 
-          CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowContent: "naver",rowTintColor: .indigo,
-          rowLinkDestination: "https://m.naver.com")
-          
           CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowTintColor: .indigo, rowLinkLabel: "Credo Acedemy", rowLinkDestination: "https://credo.academy")
-          CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowTintColor: .indigo, rowLinkLabel: "naver", rowLinkDestination: "https://m.naver.com")
+          CustomListRowView(rowLabel: "MyGit", rowIcon: "rosette", rowTintColor: .teal, rowLinkLabel: "Git", rowLinkDestination: "https://github.com/LJH3904")
 
         }//:Section
 

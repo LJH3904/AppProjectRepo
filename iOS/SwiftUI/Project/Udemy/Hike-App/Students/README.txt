@@ -1,1 +1,2 @@
-Save your Xcode project into this folder.
+#HIKEAPP
+- 진짜힘드네
