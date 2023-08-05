@@ -16,7 +16,6 @@ struct SettingView: View {
     "AppIcon-MagnifyingGlass",
     "AppIcon-Map",
     "AppIcon-Mushroom"
-
   ]
 
     var body: some View {
@@ -78,7 +77,7 @@ struct SettingView: View {
                   if error != nil {
                     print("Failed request to update the app's icon:\(String(describing: error?.localizedDescription))")
                   }else{
-                    print("Success! You Have changed the app;s icon to \(alternateAppIcons[item])")
+                    print("Success! You Have changed the app's icon to \(alternateAppIcons[item])")
                   }
                 }
               } label: {
@@ -100,8 +99,7 @@ struct SettingView: View {
             .foregroundColor(.secondary)
             .font(.footnote)
         }
-        .listSectionSeparator(.hidden)
-        
+       
         //MARK: - Section : About
         Section(
           header: Text("About The App"),
@@ -109,8 +107,7 @@ struct SettingView: View {
             Spacer()
             Text("CopyLight @ All right reserved.")
             Spacer()
-          }
-            .padding(.vertical,8)
+          }.padding(.vertical,8)
         ){
           // 1. Basic Labeled Content
 //          LabeledContent("Application", value: "Hike")
@@ -128,6 +125,7 @@ struct SettingView: View {
           CustomListRowView(rowLabel: "Designer", rowIcon: "paintpalette", rowContent: "LJS", rowTintColor: .pink)
 
           CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowTintColor: .indigo, rowLinkLabel: "Credo Acedemy", rowLinkDestination: "https://credo.academy")
+          
           CustomListRowView(rowLabel: "MyGit", rowIcon: "rosette", rowTintColor: .teal, rowLinkLabel: "Git", rowLinkDestination: "https://github.com/LJH3904")
 
         }//:Section

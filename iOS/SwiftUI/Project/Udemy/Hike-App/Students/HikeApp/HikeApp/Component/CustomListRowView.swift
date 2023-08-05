@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomListRowView: View {
   //MARK: - properties
-  
+
   @State var rowLabel : String
   @State var rowIcon : String
   @State var rowContent : String? = nil
@@ -18,6 +18,7 @@ struct CustomListRowView: View {
   @State var rowLinkDestination : String? = nil
   
   var body: some View {
+  
     LabeledContent {
       if rowContent != nil {
         Text(rowContent!)

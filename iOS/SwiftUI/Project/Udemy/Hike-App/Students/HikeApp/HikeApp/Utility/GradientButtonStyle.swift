@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct GradientButton : ButtonStyle{
+struct GradientButton : ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
     configuration
       .label
@@ -16,7 +16,6 @@ struct GradientButton : ButtonStyle{
       .padding(.horizontal, 30)
       .background(
         
-       
         configuration.isPressed ?
         // A : 버튼 누름
         LinearGradient(colors: [Color.customGrayMedium,.customGrayLight], startPoint: .top, endPoint: .bottom)
@@ -25,6 +24,5 @@ struct GradientButton : ButtonStyle{
         LinearGradient(colors: [Color.customGrayLight,.customGrayMedium], startPoint: .top, endPoint: .bottom)
       )
       .cornerRadius(40)
-    
   }
 }

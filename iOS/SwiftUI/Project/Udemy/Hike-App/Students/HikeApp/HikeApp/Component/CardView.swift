@@ -44,13 +44,14 @@ struct CardView: View {
             Text("Hiking")
               .fontWeight(.black)
               .font(.system(size: 52))
-              .foregroundStyle(LinearGradient(colors: [.customGrayLight,.customGrayMedium], startPoint: .top, endPoint: .bottom)
+              .foregroundStyle(
+                LinearGradient(colors: [.customGrayLight,.customGrayMedium], startPoint: .top, endPoint: .bottom)
               )
             
             Spacer()
             
             Button {
-              //action : show a sheet
+              //Action : Show a sheet
               isShowingSheet.toggle()
             } label: {
               CustomButtonView()
@@ -63,7 +64,6 @@ struct CardView: View {
           }
           
           Text("Fun and enjoyable outdoor activity for freiends and families.")
-            .multilineTextAlignment(.leading)
             .italic()
             .foregroundColor(.customGrayMedium)
         }// :header
@@ -77,7 +77,7 @@ struct CardView: View {
           Image("image-\(imageNumber)")
             .resizable()
             .scaledToFit()
-            .animation(.default, value: imageNumber)
+            .animation(.easeOut(duration: 2.0), value: imageNumber)
         }
         
         //MARK: - Footer
@@ -97,7 +97,8 @@ struct CardView: View {
             .shadow(color: .black.opacity(0.25), radius: 0.25, x: 1, y: 2)
         }
         .buttonStyle(GradientButton())
-      }// : ZSTACK
+        
+      }// : VSTACK
     }// : CARD
     .frame(width: 320,height: 570)
     
