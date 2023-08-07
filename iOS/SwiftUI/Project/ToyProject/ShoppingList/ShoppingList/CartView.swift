@@ -9,12 +9,13 @@ import SwiftUI
 
 struct CartView: View {
     @EnvironmentObject var itemStore: ItemStore
+  
     @State var url: URL
     @State var isShowingShoppingWeb: Bool = false
     
     var body: some View {
         List {
-            ForEach(itemStore.cartItems) { item in
+          ForEach(itemStore.cartItems) { item in
                 Button {
                     url = item.shoppingUrl
                     isShowingShoppingWeb = true
@@ -23,6 +24,9 @@ struct CartView: View {
                 }
             }
             .onDelete(perform: itemStore.deleteItem)
+        }
+        .onAppear(){
+          itemStore.fetchProducts()
         }
         .listStyle(.inset)
         .sheet(isPresented: $isShowingShoppingWeb) {

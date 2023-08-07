@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Item: Identifiable {
-    var id = UUID()
+struct Item :Identifiable , Codable{
+    var id : String
     var name: String
     var imageUrlString: String
     var imageUrl: URL {
@@ -20,4 +20,6 @@ struct Item: Identifiable {
     var shoppingUrl: URL {
         URL(string: shoppingUrlString) ?? URL(string: "https://naver.com")!
     }
+ 
+  
 }

@@ -9,16 +9,9 @@ import Foundation
 
 class ItemStore: ObservableObject {
     var shoppingItems: [Item] = []
+    @Published var products : [Item] = []
     @Published var cartItems: [Item] = []
     
-    init() {
-        shoppingItems = [
-            Item(name: "삼성전자 갤럭시 Z 플립5 5G 자급제 SM-F731N", imageUrlString: "https://images.samsung.com/kdp/event/sec/2023/0801_galaxy_flip5/preorder/buying/slide/flip5_buying_default01_pc.png", price: 1289000, shoppingName: "Coupang", shoppingUrlString: "https://www.coupang.com/vp/products/7410157624?itemId=19197972081&vendorItemId=86315402641&q=%ED%95%B8%EB%93%9C%ED%8F%B0&itemsCount=36&searchId=cc5372605ae348519b0819e0682c0bf0&rank=0&isAddedCart="),
-            Item(name: "에어팟 맥스", imageUrlString: "data:image/jpeg;base64,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", price: 769000, shoppingName: "Apple", shoppingUrlString: "https://www.apple.com/kr/shop/buy-airpods/airpods-max"),
-            Item(name: "Mac Studio", imageUrlString: "https://www.apple.com/v/mac-studio/f/images/overview/hero/static_front__fmvxob6uyxiu_large.jpg", price: 2990000, shoppingName: "Apple", shoppingUrlString: "https://www.apple.com/kr/mac-studio/")
-        ]
-    }
-
     func addItem(item: Item) {
         cartItems.append(item)
     }
@@ -26,5 +19,58 @@ class ItemStore: ObservableObject {
     func deleteItem(at offsets: IndexSet){
         cartItems.remove(atOffsets: offsets)
     }
+  func fetchProducts() {
+    products = loadJson("products.json")
+  }
+  func fetchStickers() {
+    // UserDefaults의 데이터를 가져오는 국룰 코드
+    do {
+      // UserDefaults에서 "Stickers"라는 key의 값을 가져오는데
+      // 이 value는 어떤 타입인지를 따로 알려주니는 않는다
+      // JSON을 인코딩해서 Data 만들어 저장한거니까
+      // 우리는 미리 이것이 Data 타입이라고 생각하고
+      // 형 변환 (as? Data)과 관련된 if let 옵셔널 바인딩 처리로
+      // 올바르게 Data 타입의 data 인스턴스가 잡혔을때만 관련 처리를 진행한다
+      if let data = UserDefaults.standard.object(forKey: "Stickers") as? Data {
+        let decoder: JSONDecoder = JSONDecoder()
+        stickers = try decoder.decode([Sticker].self, from: data)
+      }
+    } catch {
+      print("UserDefaults로 부터 데이터 가져오기 실패")
+    }
+  }
+  func loadJson(_ filename: String) -> [Item] {
+    let data: Data
+    
+    // 프로젝트의 번들 파일들 중에서
+    // 해당 이름의 파일이 존재하는지 확인해서
+    // 그 파일이 있다면 file이라는 주소 값에 담고
+    // 없다면 에러를 발생시키고 중지한다
+    guard let file: URL = Bundle.main.url(forResource: filename, withExtension: nil) else {
+      fatalError("\(filename) not found.")
+    }
+    
+    // 존재하는 file 주소에 접근해 그 내용을 읽어서 Data 값으로 만든다
+    do {
+      data = try Data(contentsOf: file)
+    } catch {
+      fatalError("Could not load \(filename): \(error)")
+    }
+    
+    // 이제 Data 타입의 내용을 JSON이라고 생각해서
+    // 원래 우리가 목표로 한 [Product] 타입으로 변환시켜 담아보도록 한다
+    do {
+      return try JSONDecoder().decode([Item].self, from: data)
+    } catch {
+      fatalError("Unable to parse \(filename): \(error)")
+    }
+  }
+  
+  
 }
 
+class ProductStore : ObservableObject{
+  
+ 
+  
+}
