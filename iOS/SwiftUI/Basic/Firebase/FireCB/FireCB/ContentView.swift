@@ -80,6 +80,8 @@ struct ContentView: View {
       
       
     }
+    
+    .animation
     .padding()
   }
 }
