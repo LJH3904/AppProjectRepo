@@ -27,6 +27,7 @@ struct CircleGroupView: View {
       .opacity(isAnimating ? 1 : 0)
       .scaleEffect(isAnimating ? 1 : 0.5)
       .animation(.easeOut(duration: 1), value: isAnimating)
+      
       .onAppear(){
         isAnimating = true
       }

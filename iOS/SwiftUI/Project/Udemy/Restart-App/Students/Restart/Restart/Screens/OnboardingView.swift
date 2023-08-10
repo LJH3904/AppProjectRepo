@@ -67,11 +67,14 @@ struct OnboardingView: View {
           
             .scaledToFill()
           //scaledToFill은 자기가
-            .opacity(isAnimating ? 1 : 0)
+            
             //투명도
+            .opacity(isAnimating ? 1 : 0)
+            //애니메이션
             .animation(.easeOut(duration: 0.5), value: isAnimating)
-            .offset(x:imageOffset.width * 1.2, y: 0)
             //위치
+            .offset(x:imageOffset.width * 1.2, y: 0)
+            
             .rotationEffect(.degrees(Double(imageOffset.width/10)))
             //회전률
             .gesture(DragGesture().onChanged({ a in
