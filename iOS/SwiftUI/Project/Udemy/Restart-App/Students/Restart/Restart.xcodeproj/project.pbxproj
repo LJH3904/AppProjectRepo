@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362F246A2A84CDC500E3051B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362F24692A84CDC500E3051B /* TestView.swift */; };
 		3635DB0B2A83C74C00875EB6 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3635DB0A2A83C74C00875EB6 /* AudioPlayer.swift */; };
 		369508692A8011010091E326 /* RestartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369508682A8011010091E326 /* RestartApp.swift */; };
 		3695086B2A8011010091E326 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3695086A2A8011010091E326 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		362F24692A84CDC500E3051B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		3635DB0A2A83C74C00875EB6 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		369508652A8011010091E326 /* Restart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369508682A8011010091E326 /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				3695086A2A8011010091E326 /* ContentView.swift */,
 				36C06B1C2A826C730064B12E /* OnboardingView.swift */,
 				36C06B1E2A826C860064B12E /* HomeView.swift */,
+				362F24692A84CDC500E3051B /* TestView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362F246A2A84CDC500E3051B /* TestView.swift in Sources */,
 				36C06B212A82A5780064B12E /* CircleGroupView.swift in Sources */,
 				36C06B1D2A826C730064B12E /* OnboardingView.swift in Sources */,
 				36C06B1F2A826C860064B12E /* HomeView.swift in Sources */,

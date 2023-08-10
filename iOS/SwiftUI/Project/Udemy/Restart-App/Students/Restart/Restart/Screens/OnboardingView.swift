@@ -75,7 +75,7 @@ struct OnboardingView: View {
             //위치
             .offset(x:imageOffset.width * 1.2, y: 0)
             
-            .rotationEffect(.degrees(Double(imageOffset.width/10)))
+            .rotationEffect(.degrees(Double(imageOffset.width/0.5)))
             //회전률
             .gesture(DragGesture().onChanged({ a in
               if abs(imageOffset.width) <= 150 {
@@ -155,7 +155,6 @@ struct OnboardingView: View {
               .foregroundColor(.white)
               .frame(width: 80,height: 80,alignment: .center)
               .offset(x: buttonOffset)
-              
               .gesture(
                 DragGesture()
                   .onChanged({ gesture in
