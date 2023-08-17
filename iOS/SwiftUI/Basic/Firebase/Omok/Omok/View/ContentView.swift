@@ -16,53 +16,80 @@ struct ContentView: View {
   @State var stone : [[String]] = Array(repeating: Array(repeating: "", count: 15), count: 15)
   @State var table : [[String]] = Array(repeating: Array(repeating: "plus", count: 15), count: 15)
   @State var turn : Bool = true
-  var direction = [1,-1]
   
-  //MARK: - func
-  func check(y: Int, x: Int) -> Bool {
-    
-    func checkX(y: Int, x: Int) -> Bool {
-      var queue = [(y,x)]
-      var count = 0
-      while !queue.isEmpty {
-        let yx = queue.removeFirst(), x = yx.1
-        for i in 0..<2 {
-          let mx = x + direction[i]
-          
-          guard mx>=0 && mx<stone[0].count else { continue }
-          guard stone[y][mx] == stone[y][x] else { continue }
-          queue.append((y,mx))
-          count += 1
-        }
-      }
-      return count >= 5 ? true : false
-    }
-    
-    func checkY(y: Int, x: Int) -> Bool {
-      var queue = [(y,x)]
-      var count = 0
-      while !queue.isEmpty {
-        let yx = queue.removeFirst(), y = yx.0
-        for i in 0..<2 {
-          let my = y + direction[i]
-          
-          guard my>=0 && my<stone.count else { continue }
-          guard stone[my][x] == stone[y][x] else { continue }
-          queue.append((my,x))
-          count += 1
-        }
-      }
-      return count >= 5 ? true : false
-    }
-    
-    let a = checkX(y: y, x: x)
-    let b = checkY(y: y, x: x)
-    
-    return a || b
+  var nowUser : String {
+    return turn ? "x.circle" : "o.circle"
   }
   
-  
-  
+  @State var iswinner : String = ""
+  //MARK: - func
+  func isWin(y: Int, x: Int , winner : String){
+    // 세로
+    print("검사중 :    \(nowUser) 검사중")
+    
+   
+    
+    for y in 0..<11{
+      for x in 0..<15{
+        if stone[y][x] == nowUser
+            && stone[y+1][x] == nowUser
+            && stone[y+2][x] == nowUser
+            && stone[y+3][x] == nowUser
+            && stone[y+4][x] == nowUser{
+          iswinner = "승자는 \(winner)"
+          
+          return
+        }
+      }
+    }
+    
+    // 가로
+    for x in 0..<11{
+      for y in 0..<15{
+        if stone[y][x] == nowUser
+            && stone[y][x+1] == nowUser
+            && stone[y][x+2] == nowUser
+            && stone[y][x+3] == nowUser
+            && stone[y][x+4] == nowUser{
+          iswinner = "승자는 \(winner)"
+          
+          return
+        }
+      }
+    }
+    
+    // 왼대각
+    for y in 0..<11{
+      for x in 0..<11{
+        if stone[y][x] == nowUser
+            && stone[y+1][x+1] == nowUser
+            && stone[y+2][x+2] == nowUser
+            && stone[y+3][x+3] == nowUser
+            && stone[y+4][x+4] == nowUser{
+          iswinner = "승자는 \(winner)"
+          
+          return
+        }
+      }
+    }
+    
+    //우대각
+    for y in 0..<11{
+      for x in 0..<11{
+            if nowUser == stone[15 - y-1][x]
+            && nowUser == stone[15 - y-2][x+1]
+            && nowUser == stone[15 - y-3][x+2]
+            && nowUser == stone[15 - y-4][x+3]
+            && nowUser == stone[15 - y-5][x+4]
+            {
+              iswinner = "승자는 \(winner)"
+              
+          return
+        }
+      }
+    }
+  }
+ 
   func settingStart(){
     for y in 0..<15 {
       for x in 0..<15 {
@@ -80,6 +107,7 @@ struct ContentView: View {
   
   
   func changeTurn() {
+    
     turn.toggle()
     dbRef.child("turn").child("true").setValue(turn)
     dbRef.child("turn").child("true").observe(.value) { snapshot in
@@ -98,20 +126,23 @@ struct ContentView: View {
   
   
   func pressedStoneButton (y : Int , x : Int){
+    
+    
     if turn {
       //흑돌
-      stone[y][x] = "x.circle"
+      stone[y][x] = nowUser
       table[y][x] = ""
       dbRef.child("dol").child("\(y)").child("\(x)").setValue(stone[y][x])
       
     }else{
       //백돌
-      stone[y][x] = "o.circle"
+      stone[y][x] = nowUser
       table[y][x] = ""
       dbRef.child("dol").child("\(y)").child("\(x)").setValue(stone[y][x])
       
     }
     //    print("dol[y][x]의 값:\(dol[y][x])")
+    
   }
   
   
@@ -123,7 +154,7 @@ struct ContentView: View {
         VStack {
           //MARK: - ViewHeader
           
-          Text(turn ? "OOOOOOOOOO": "XXXXXXXXXX")
+          Text("\(iswinner)")
             .foregroundColor(.white)
             .fontWeight(.heavy)
             .font(.title)
@@ -141,8 +172,9 @@ struct ContentView: View {
                       guard stone[y][x] == "" else{
                         return
                       }
+                      
                       pressedStoneButton(y: y, x: x)
-                      //Turn
+                      isWin(y: y, x: x , winner: nowUser)
                       changeTurn()
                     } label: {
                       Image(stone[y][x])
@@ -161,6 +193,7 @@ struct ContentView: View {
           Button {
             //db 초기세팅
             settingStart()
+            iswinner = ""
           } label: {
             Text("게임시작")
               .foregroundColor(.white)
@@ -185,8 +218,11 @@ struct ContentView: View {
                 self.table[y][x] = "plus"
                 self.stone[y][x] = value
               } else {
+                
                 self.stone[y][x] = value
+                self.table[y][x] = ""
               }
+              
             }
             
           }
@@ -201,3 +237,95 @@ struct ContentView_Previews: PreviewProvider {
     ContentView()
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//var direction = [1,-1]
+////
+//  func check(y: Int, x: Int) -> Bool {
+//
+//    func checkX(y: Int, x: Int) -> Bool {
+//      var queue = [(y,x)]
+//      var count = 0
+//      while !queue.isEmpty {
+//        let yx = queue.removeFirst(), x = yx.1
+//        for i in 0..<2 {
+//          let mx = x + direction[i]
+//
+//          guard mx>=0 && mx<stone[0].count else { continue }
+//          guard stone[y][mx] == stone[y][x] else { continue }
+//          queue.append((y,mx))
+//          count += 1
+//        }
+//      }
+//      return count >= 5 ? true : false
+//    }
+//
+//    func checkY(y: Int, x: Int) -> Bool {
+//      var queue = [(y,x)]
+//      var count = 0
+//      while !queue.isEmpty {
+//        let yx = queue.removeFirst(), y = yx.0
+//        for i in 0..<2 {
+//          let my = y + direction[i]
+//
+//          guard my>=0 && my<stone.count else { continue }
+//          guard stone[my][x] == stone[y][x] else { continue }
+//          queue.append((my,x))
+//          count += 1
+//        }
+//      }
+//      return count >= 5 ? true : false
+//    }
+//
+//    let a = checkX(y: y, x: x)
+//    let b = checkY(y: y, x: x)
+//
+//    return a || b
+//  }
+
