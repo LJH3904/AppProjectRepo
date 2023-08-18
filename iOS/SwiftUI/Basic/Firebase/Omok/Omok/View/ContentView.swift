@@ -142,6 +142,8 @@ struct ContentView: View {
       
     }
     //    print("dol[y][x]의 값:\(dol[y][x])")
+    // 옵저브 하는 코드  x ,y 의 해당하는 값만 옵저브 되도록
+    // 눌렀고 세팅되고 옵저브하고 하나하나 각자 옵저브해서 말이 안되는 코드였어요
     
   }
   
@@ -207,7 +209,7 @@ struct ContentView: View {
       appear()
     }
   }
-  
+  //어제 온어피어를 사용하지 않았지 않나요?
   func appear() {
     for y in 0..<15 {
       for x in 0..<15 {
@@ -218,7 +220,6 @@ struct ContentView: View {
                 self.table[y][x] = "plus"
                 self.stone[y][x] = value
               } else {
-                
                 self.stone[y][x] = value
                 self.table[y][x] = ""
               }
@@ -237,95 +238,4 @@ struct ContentView_Previews: PreviewProvider {
     ContentView()
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//var direction = [1,-1]
-////
-//  func check(y: Int, x: Int) -> Bool {
-//
-//    func checkX(y: Int, x: Int) -> Bool {
-//      var queue = [(y,x)]
-//      var count = 0
-//      while !queue.isEmpty {
-//        let yx = queue.removeFirst(), x = yx.1
-//        for i in 0..<2 {
-//          let mx = x + direction[i]
-//
-//          guard mx>=0 && mx<stone[0].count else { continue }
-//          guard stone[y][mx] == stone[y][x] else { continue }
-//          queue.append((y,mx))
-//          count += 1
-//        }
-//      }
-//      return count >= 5 ? true : false
-//    }
-//
-//    func checkY(y: Int, x: Int) -> Bool {
-//      var queue = [(y,x)]
-//      var count = 0
-//      while !queue.isEmpty {
-//        let yx = queue.removeFirst(), y = yx.0
-//        for i in 0..<2 {
-//          let my = y + direction[i]
-//
-//          guard my>=0 && my<stone.count else { continue }
-//          guard stone[my][x] == stone[y][x] else { continue }
-//          queue.append((my,x))
-//          count += 1
-//        }
-//      }
-//      return count >= 5 ? true : false
-//    }
-//
-//    let a = checkX(y: y, x: x)
-//    let b = checkY(y: y, x: x)
-//
-//    return a || b
-//  }
 
