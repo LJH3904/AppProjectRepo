@@ -68,8 +68,8 @@ class PeopleStore : ObservableObject {
   //MARK: - array
  
   func resetAll(){
-    let temp = loadJson("FinalSheet.json")
-    peoples = temp
+    
+    peoples = loadJson("People_5.json")
     delPeople.removeAll()
     saveUser()
     saveDelPeople()
@@ -77,9 +77,12 @@ class PeopleStore : ObservableObject {
   
   func deletePeople(at offset : IndexSet){
       peoples.remove(atOffsets: offset)
+      saveUser()
+  }
+  func addPeople ( _ ppl : People){
+    peoples.append(ppl)
     saveUser()
   }
-  
   func deleteMonster(_ people : People){
     peoples.removeAll(where: { $0.name == people.name})
     saveUser()
@@ -94,7 +97,7 @@ class PeopleStore : ObservableObject {
   //MARK: - JSON
 
   func fetchProduct () {
-    peoples = loadJson("FinalSheet.json")
+    peoples = loadJson("People_5.json")
     fetchUser()
   }
   func loadJson(_ filename: String) -> [People] {

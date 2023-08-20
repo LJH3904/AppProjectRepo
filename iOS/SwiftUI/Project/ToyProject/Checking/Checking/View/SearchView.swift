@@ -9,53 +9,64 @@ import SwiftUI
 
 struct SearchView: View {
   @ObservedObject var peopleStore : PeopleStore
-  @State var searchName : String
-  @State var showText : String = ""
+  @Binding var searchName : String
+  @Binding var isShowingshee : Bool
   
+ 
   var body: some View {
     VStack{
       Spacer()
-      Text("\(showText)님이 삭제되었습니다.")
-      Spacer()
       ForEach(peopleStore.peoples, id: \.self){ people in
         if people.name == searchName {
+          
           VStack(alignment: .leading, spacing: 10 ){
+            
             Text("이름 : \(people.name)")
+              .font(.title)
             Text("출발 : \(people.Departure)")
-            Text("성별 : \(people.sex)")
-            Text("전화번호 : \(people.tel)")
-            Text("생년월일 : \(people.birth)")
+            Text("소속 : \(people.organization)")
             
           }
           .font(.body)
           .fontWeight(.heavy)
         }
       }
+      
       Spacer()
-      Button {
-        for people in peopleStore.peoples {
-          if people.name == searchName {
-            peopleStore.deleteMonster(people)
-            showText = people.name
-            peopleStore.addDelPeople(people)
-          }
-        }
-      } label: {
-        Text("삭제")
-          .font(.headline)
-      }
       Divider()
-      
-      
-      VStack {
-        Form {
-          List(peopleStore.delPeople , id: \.self){ delppl in
-            Text("\(delppl.name)")
-          }
-        }
+
+      List(peopleStore.delPeople , id: \.self){ delppl in
+        Text("\(delppl.name)")
       }
+      
       Spacer()
+      HStack {
+        Spacer()
+        Button {
+          for people in peopleStore.peoples {
+            if people.name == searchName {
+              peopleStore.deleteMonster(people)
+              peopleStore.addDelPeople(people)
+              searchName = ""
+              isShowingshee = false
+            }
+          }
+        } label: {
+          Text("삭제")
+            .font(.title)
+            
+      }
+        Spacer()
+        Button {
+          isShowingshee = false
+        } label: {
+          Text("취소")
+            .foregroundColor(.red)
+        }
+        Spacer()
+      }
     }
+    .padding()
     .refreshable {
       peopleStore.fetchdelPeople()
       
@@ -67,8 +78,4 @@ struct SearchView: View {
   }
 }
 
-struct SearchView_Previews: PreviewProvider {
-  static var previews: some View {
-    SearchView(peopleStore: PeopleStore(),searchName: "asd" )
-  }
-}
+
