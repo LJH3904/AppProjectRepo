@@ -16,9 +16,6 @@ class ContentStore: ObservableObject {
     
     var dbRef = Firestore.firestore().collection("공지사항")
     
-
-    
-    
     func fetchContents(DBname: String) {
         if DBname == "공지사항" {
             dbRef = Firestore.firestore().collection("공지사항")
