@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		362F246A2A84CDC500E3051B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362F24692A84CDC500E3051B /* TestView.swift */; };
 		3635DB0B2A83C74C00875EB6 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3635DB0A2A83C74C00875EB6 /* AudioPlayer.swift */; };
+		366B81A12AA0F05A00C10047 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B81A02AA0F05A00C10047 /* DemoView.swift */; };
 		369508692A8011010091E326 /* RestartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369508682A8011010091E326 /* RestartApp.swift */; };
 		3695086B2A8011010091E326 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3695086A2A8011010091E326 /* ContentView.swift */; };
 		3695086D2A8011030091E326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3695086C2A8011030091E326 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		362F24692A84CDC500E3051B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		3635DB0A2A83C74C00875EB6 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		366B81A02AA0F05A00C10047 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		369508652A8011010091E326 /* Restart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369508682A8011010091E326 /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
 		3695086A2A8011010091E326 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		366B819F2AA0F04400C10047 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				366B81A02AA0F05A00C10047 /* DemoView.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		3695085C2A8011010091E326 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 			children = (
 				3695087E2A8014C60091E326 /* Info.plist */,
 				369508682A8011010091E326 /* RestartApp.swift */,
+				366B819F2AA0F04400C10047 /* Demo */,
 				3695087D2A8013300091E326 /* Utility */,
 				3695087C2A8013190091E326 /* Views */,
 				3695087A2A8011F90091E326 /* Sounds */,
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362F246A2A84CDC500E3051B /* TestView.swift in Sources */,
+				366B81A12AA0F05A00C10047 /* DemoView.swift in Sources */,
 				36C06B212A82A5780064B12E /* CircleGroupView.swift in Sources */,
 				36C06B1D2A826C730064B12E /* OnboardingView.swift in Sources */,
 				36C06B1F2A826C860064B12E /* HomeView.swift in Sources */,
