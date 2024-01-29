@@ -32,20 +32,20 @@ struct FeedView: View {
   ]
   
     var body: some View {
-      ScrollView(.vertical){
-        LazyVGrid(columns: layoutPeed) {
-          ForEach(feeds,id: \.self){ image in
-            NavigationLink {
-              FeedDetailView()
-            } label: {
-              Image(image).setFeed()
+        ScrollView(.vertical){
+            LazyVGrid(columns: layoutPeed) {
+                ForEach(feeds,id: \.self){ image in
+                    NavigationLink {
+                        FeedDetailView()
+                    } label: {
+                        Image(image).setFeed()
+                    }
+                    
+                    
+                }
             }
-
-            
-          }
         }
-      }
-      
+        
     }
 }
 
